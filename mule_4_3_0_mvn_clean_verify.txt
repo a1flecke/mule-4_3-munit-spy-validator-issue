@@ -1,0 +1,464 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.mycompany:mule-tester >----------------------
+[INFO] Building mule-tester 1.0.0-SNAPSHOT
+[INFO] --------------------------[ mule-application ]--------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean-1) @ mule-tester ---
+[INFO] Deleting /Users/aaron.fleckenstein/AnypointStudio/studio-workspace/mule-tester/target
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:clean (default-clean) @ mule-tester ---
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ mule-tester ---
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:validate (default-validate) @ mule-tester ---
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:initialize (default-initialize) @ mule-tester ---
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:generate-sources (default-generate-sources) @ mule-tester ---
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:process-sources (default-process-sources) @ mule-tester ---
+[INFO] About to fetch required dependencies for artifact: com.mycompany:mule-tester:pom:1.0.0-SNAPSHOT. This may take a while...
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ mule-tester ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:process-resources (default-process-resources) @ mule-tester ---
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ mule-tester ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:compile (default-compile) @ mule-tester ---
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:process-classes (default-process-classes) @ mule-tester ---
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:generate-test-sources (default-generate-test-sources) @ mule-tester ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ mule-tester ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:generate-test-resources (default-generate-test-resources) @ mule-tester ---
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ mule-tester ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- mule-maven-plugin:3.3.5:test-compile (default-test-compile) @ mule-tester ---
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ mule-tester ---
+[INFO] 
+[INFO] --- munit-maven-plugin:2.2.5:test (test) @ mule-tester ---
+[INFO] Acquiring dynamic ports...
+[INFO] Dynamic port definition [DONE]
+[INFO] Copying files to /Users/aaron.fleckenstein/AnypointStudio/studio-workspace/mule-tester/target/munitworkingdir-519872756097722/mule-tester
+[INFO] Running MULE_EE with version 4.3.0
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+INFO  2020-05-15 10:25:44,655 [main] org.mule.munit.remote.RemoteRunner: Run Started
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.mule.runtime.core.api.util.ClassUtils (file:/Users/aaron.fleckenstein/.m2/repository/org/mule/runtime/mule-core/4.3.0/mule-core-4.3.0.jar) to constructor sun.net.www.protocol.https.Handler()
+WARNING: Please consider reporting this to the maintainers of org.mule.runtime.core.api.util.ClassUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+INFO  2020-05-15 10:25:50,336 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+*                                                                    *
+*                         (((((((((((((((((((                        *
+*                     (((((                 ((((#                    *
+*                  &(((                        *(((                  *
+*                &(((                             (((                *
+*               (((     (((%               (((#     (((              *
+*              ((     (((((((             (((((((    (((             *
+*             ((     (((((((((           (((((((((     ((            *
+*            ((    #(((((((((((        #(((((((((((    (((           *
+*           #((    ((((((((((((((     ((((((((((((((    ((           *
+*           ((    ((((((  /(((((((   (((((((  /((((((    ((          *
+*           ((    ((((((    (((((((&(((((((    ((((((    ((          *
+*           ((    (((((      ((((((((((((*     ((((((    ((          *
+*           ((    ((((((      *(((((((((       ((((((    ((          *
+*           ((    ((((((        (((((((        ((((((   (((          *
+*            ((    ((((((                     ((((((    ((           *
+*            ((#    ((((((#                 (((((((    ((            *
+*             ((#    ((((((((             ((((((((    (((            *
+*              (((    (((((((              (((((     ((.             *
+*                ((      (((               (((     #((               *
+*                 /((                            (((                 *
+*                    (((                      &(((                   *
+*                      *((((&             &((((                      *
+*                           ((((((((((((((/                          *
+*                                                                    *
+*    ___  ___      _        ______            _   _                  *
+*    |  \/  |     | |       | ___ \          | | (_)                 *
+*    | .  . |_   _| | ___   | |_/ /   _ _ __ | |_ _ _ __ ___   ___   *
+*    | |\/| | | | | |/ _ \  |    / | | | '_ \| __| | '_ ` _ \ / _ \  *
+*    | |  | | |_| | |  __/  | |\ \ |_| | | | | |_| | | | | | |  __/  *
+*    \_|  |_/\__,_|_|\___|  \_| \_\__,_|_| |_|\__|_|_| |_| |_|\___|  *
+*                                                                    *
+*                                                                    *
+* Mule Runtime and Integration Platform                              *
+* Version: 4.3.0 Build: 5bb13483                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to                                         *
+* https://www.mulesoft.com/platform/soa/mule-esb-enterprise          *
+*                                                                    *
+* Server started: 5/15/20, 10:25 AM                                  *
+* JDK: 11.0.7 (mixed mode)                                           *
+* JDK properties:                                                    *
+*  - java.vendor = Amazon.com Inc.                                   *
+*  - java.vm.name = OpenJDK 64-Bit Server VM                         *
+* - java.home =                                                      *
+* /Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/ *
+* Home                                                               *
+* OS: Mac OS X (10.15.4, x86_64)                                     *
+* Host: mm-fleckensteina2 (172.21.97.138)                            *
+* Mule services:                                                     *
+*  - api-gateway-events-collector-service-1.1.0                      *
+*  - mule-service-soap-1.3.0                                         *
+*  - api-gateway-contract-service-1.1.0                              *
+*  - mule-service-oauth-ee-1.0.0                                     *
+*  - mule-service-weave-ee-2.3.0                                     *
+*  - mule-service-http-ee-1.6.0                                      *
+*  - mule-service-scheduler-1.3.0                                    *
+* Mule server plugins:                                               *
+*  - munit-coverage-plugin-2.2.5-mule-server-plugin.jar              *
+* Mule system properties:                                            *
+*  - mule.testingMode = true                                         *
+* - mule.home =                                                      *
+* /Users/aaron.fleckenstein/AnypointStudio/studio-workspace/mule-tes *
+* ter/target/munitworkingdir-519872756097722/container               *
+*  - mule.mode.embedded = true                                       *
+**********************************************************************
+INFO  2020-05-15 10:25:50,544 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+* Cluster configuration                                              *
+*                                                                    *
+* Cluster mode disabled                                              *
+**********************************************************************
+WARN  2020-05-15 10:25:50,553 [Embedded] com.mulesoft.mule.runtime.plugin.discoverer.FileSystemPluginDiscoverer: Cannot unzip plugin file 'munit-coverage-plugin-2.2.5-mule-server-plugin.jar'
+WARN  2020-05-15 10:25:50,553 [Embedded] com.mulesoft.mule.runtime.plugin.discoverer.FileSystemPluginDiscoverer: Cannot delete plugin file 'munit-coverage-plugin-2.2.5-mule-server-plugin.jar'. Plugin will be overwritten on restart
+WARN  2020-05-15 10:25:50,553 [Embedded] com.mulesoft.mule.runtime.plugin.discoverer.FileSystemPluginDiscoverer: Cannot load descriptor for plugin 'munit-coverage-plugin-2.2.5-mule-server-plugin': Artifact descriptor does not exists: /Users/aaron.fleckenstein/AnypointStudio/studio-workspace/mule-tester/target/munitworkingdir-519872756097722/container/server-plugins/munit-coverage-plugin-2.2.5-mule-server-plugin/META-INF/mule-artifact/mule-artifact.json (org.mule.runtime.module.artifact.api.descriptor.ArtifactDescriptorCreateException)
+INFO  2020-05-15 10:25:50,570 [Embedded] org.mule.munit.plugins.coverage.CoverageServerPlugin: Initialising coverage plugin...
+INFO  2020-05-15 10:25:50,656 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New domain 'default'                                                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:25:50,656 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing domain 'default'                                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:25:51,011 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+* Domain: default                                                    *
+* OS encoding: UTF-8, Mule encoding: UTF-8                           *
+*                                                                    *
+**********************************************************************
+INFO  2020-05-15 10:25:51,012 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+* Started domain 'default'                                           *
+**********************************************************************
+INFO  2020-05-15 10:25:51,014 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:25:51,015 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+INFO  2020-05-15 10:25:51,016 [main] org.mule.munit.remote.coverage.CoverageManager: Starting coverage server
+WARN  2020-05-15 10:25:51,852 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'MUnit' contains a local package 'com.sun.activation.viewers', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,852 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'MUnit' contains a local package 'com.sun.activation.registries', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,852 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'MUnit' contains a local package 'javax.activation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,853 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'MUnit Tools' contains a local package 'com.sun.activation.viewers', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,853 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'MUnit Tools' contains a local package 'com.sun.activation.registries', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,853 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'MUnit Tools' contains a local package 'javax.activation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.plugins.validation.validators', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.txw2', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.istack.logging', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.reactivestreams', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.html', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.selector', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.builder.impl', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.plugins.validation.constraints', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.marshaller', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.bind.annotation.adapters', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.xml.sax.helpers', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.status', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.istack', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.stylesheets', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.xml.sax', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.bind', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.runtime.property', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.util', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.api', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.txw2.annotation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.model.util', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,856 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.plugins', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.ranges', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.stream', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.views', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.slf4j.spi', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.bind.util', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.message', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.transform.stax', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.annotation.security', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.status', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.plugins.util', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.schemagen.xmlschema', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.annotation.sql', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.plugins.visitors', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.annotation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.model.nav', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.txw2.output', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.util', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.runtime.reflect', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.transform', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.jmx', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.unmarshaller', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.model.impl', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.plugins.validation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.annotation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.transform.sax', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.spi', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.schemagen', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.xml.sax.ext', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.builder.api', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.pattern', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.transform.dom', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.bootstrap', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.layout', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.bind.attachment', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.bind.helpers', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.appender.rolling.action', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.schemagen.episode', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.appender.rewrite', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,857 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.api.impl', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.traversal', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.slf4j', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.istack.localization', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.appender.rolling', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.ls', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.xpath', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.xpath', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.stream.events', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.appender', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.net', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.activation.viewers', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.activation.registries', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.util', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.script', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.runtime', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.namespace', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.async', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.runtime.unmarshaller', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.xml', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.model.annotation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.bytecode', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.runtime.output', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.model.core', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.stream.util', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.validation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.filter', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.events', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.commons.logging', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.transform.stream', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.datatype', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.bind.annotation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.lookup', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.xml.parsers', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.model.runtime', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,858 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'javax.activation', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,859 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.net.ssl', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,859 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.impl', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,859 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.runtime.reflect.opt', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,859 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'com.sun.xml.bind.v2.util', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,859 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.w3c.dom.css', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,859 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.time', but it will be ignored since it is already available from the container.
+WARN  2020-05-15 10:25:51,859 [Embedded] org.mule.runtime.deployment.model.internal.DefaultRegionPluginClassLoadersFactory: Plugin 'APIKit' contains a local package 'org.apache.logging.log4j.core.config.plugins.processor', but it will be ignored since it is already available from the container.
+INFO  2020-05-15 10:25:51,871 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'mule-tester'                                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:25:51,871 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'mule-tester'                                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+WARN  2020-05-15 10:25:52,580 [Embedded] org.mule.runtime.extension.internal.loader.enricher.ConfigRefDeclarationEnricher: Component 'console' in extension 'APIKit' already has a 'config-ref' parameter defined. Skipping ConfigRefDeclarationEnricher for it.
+WARN  2020-05-15 10:25:52,580 [Embedded] org.mule.runtime.extension.internal.loader.enricher.ConfigRefDeclarationEnricher: Component 'router' in extension 'APIKit' already has a 'config-ref' parameter defined. Skipping ConfigRefDeclarationEnricher for it.
+INFO  2020-05-15 10:25:53,887 [Embedded] org.mule.runtime.api.el.AbstractBindingContextBuilderFactory: Loaded BindingContextBuilderFactory implementation 'org.mule.runtime.core.api.el.DefaultBindingContextBuilderFactory' from classloader 'java.net.URLClassLoader@7fcf294e'
+INFO  2020-05-15 10:25:53,918 [Embedded] org.mule.service.scheduler.internal.config.ContainerThreadPoolsConfig: No thread pools config file found. Using default values.
+INFO  2020-05-15 10:25:53,981 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+* Started DefaultSchedulerService                                    *
+*                                                                    *
+* Resolved configuration values:                                     *
+*                                                                    *
+* Pooling strategy:       UBER                                       *
+* gracefulShutdownTimeout:       15000 ms                            *
+* uber.threadPool.maxSize:         783                               *
+* uber.threadPool.threadKeepAlive: 30000 ms                          *
+*                                                                    *
+* These can be modified by editing 'conf/scheduler-pools.conf'       *
+**********************************************************************
+INFO  2020-05-15 10:25:54,111 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'mule-tester'                                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:25:54,119 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+* Application: mule-tester                                           *
+* OS encoding: UTF-8, Mule encoding: UTF-8                           *
+*                                                                    *
+**********************************************************************
+INFO  2020-05-15 10:25:54,120 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+* Started app 'mule-tester'                                          *
+* Application plugins:                                               *
+*  - MUnit : 2.2.5                                                   *
+*  - MUnit Tools : 2.2.5                                             *
+*  - Sockets : 1.1.6                                                 *
+*  - HTTP : 1.5.18                                                   *
+*  - APIKit : 1.3.11                                                 *
+**********************************************************************
+INFO  2020-05-15 10:25:54,122 [munit.01] org.mule.munit.runner.remote.api.server.RunnerServer: Waiting for client connection 
+INFO  2020-05-15 10:25:54,126 [munit.01] org.mule.munit.runner.remote.api.server.RunnerServer: Client connection received from localhost - true
+INFO  2020-05-15 10:25:54,438 [munit.01] org.mule.runtime.api.message.AbstractMuleMessageBuilderFactory: Loaded MuleMessageBuilderFactory implementation 'org.mule.runtime.core.internal.message.DefaultMessageBuilderFactory' from classloader 'java.net.URLClassLoader@7fcf294e'
+WARN  2020-05-15 10:25:57,541 [munit.01] org.mule.runtime.core.internal.security.tls.TlsProperties: File tls-default.conf not found, using default configuration.
+INFO  2020-05-15 10:25:57,541 [munit.01] org.mule.runtime.api.tls.AbstractTlsContextFactoryBuilderFactory: Loaded TlsContextFactoryBuilderFactory implementation 'org.mule.runtime.module.tls.api.DefaultTlsContextFactoryBuilderFactory' from classloader 'java.net.URLClassLoader@7fcf294e'
+INFO  2020-05-15 10:25:59,772 [munit.01] org.mule.module.apikit.Configuration: Building resource URI cache...
+INFO  2020-05-15 10:25:59,790 [munit.01] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Initialising Bean: org.mule.runtime.module.extension.internal.runtime.config.ConfigurationProviderToolingAdapter-HTTP_Listener_config
+INFO  2020-05-15 10:25:59,997 [munit.01] org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager: Initialising flow: mule-testerFlow
+INFO  2020-05-15 10:26:00,011 [munit.01] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Initialising Bean: org.mule.runtime.module.extension.internal.runtime.config.ConfigurationProviderToolingAdapter-HTTP_Request_configuration
+INFO  2020-05-15 10:26:00,015 [munit.01] org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager: Initialising flow: mule-testerFlow1
+INFO  2020-05-15 10:26:00,033 [munit.01] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Initialising Bean: listener
+INFO  2020-05-15 10:26:00,065 [munit.01] org.mule.module.apikit.Router: 
+********************************************************************************
+* APIKit Router 'Router' started using Parser: AMF                             *
+********************************************************************************
+INFO  2020-05-15 10:26:00,150 [munit.01] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Starting Bean: org.mule.runtime.module.extension.internal.runtime.config.ConfigurationProviderToolingAdapter-HTTP_Listener_config
+INFO  2020-05-15 10:26:00,180 [munit.01] org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager: Starting flow: mule-testerFlow
+INFO  2020-05-15 10:26:00,283 [munit.01] org.mule.runtime.core.internal.construct.AbstractFlowConstruct: Not starting source for 'mule-testerFlow' because of org.mule.munit.runner.component.state.MunitComponentInitialStateManager@53af0090
+INFO  2020-05-15 10:26:00,283 [munit.01] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Starting Bean: org.mule.runtime.module.extension.internal.runtime.config.ConfigurationProviderToolingAdapter-HTTP_Request_configuration
+INFO  2020-05-15 10:26:00,283 [munit.01] org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager: Starting flow: mule-testerFlow1
+INFO  2020-05-15 10:26:00,297 [munit.01] org.mule.runtime.core.internal.construct.AbstractFlowConstruct: Not starting source for 'mule-testerFlow1' because of org.mule.munit.runner.component.state.MunitComponentInitialStateManager@53af0090
+================================================================================
+=== Running suite: mule-tester-test-suite.xml                                ===
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Running test: mule-tester-test-suite-mule-testerFlowTest - Test              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:26:00,342 [munit.01] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Starting Bean: listener
+INFO  2020-05-15 10:26:00,790 [[MuleRuntime].uber.12: [mule-tester].mule-testerFlow.CPU_LITE @2b58cceb] ***HEY AARON***: 
+INFO  2020-05-15 10:26:01,124 [munit.01] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Stopping Bean: listener
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+HTTP GET on resource 'http://0.0.0.0:8081/test' failed: internal server error (500).
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ERROR 2020-05-15 10:26:01,133 [munit.01] org.mule.munit.runner.model.Suite: ERROR - test: mule-tester-test-suite-mule-testerFlowTest - Time elapsed: 0.79 sec
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Ignoring test: mule-tester-test-suite-mule-testerFlowTest1 - Test            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:26:01,134 [munit.01] org.mule.munit.runner.model.Suite: IGNORED - test: mule-tester-test-suite-mule-testerFlowTest1 - Time elapsed: 0.00 sec
+================================================================================
+= Tests run: 2 - Failed: 0 - Errors: 1 - Skipped: 1 - Time elapsed: 0.82 sec   =
+================================================================================
+INFO  2020-05-15 10:26:01,135 [munit.01] org.mule.munit.runner.remote.api.server.RunnerServer: Waiting for client connection 
+INFO  2020-05-15 10:26:01,136 [Embedded] org.mule.runtime.module.deployment.internal.DefaultArchiveDeployer: ================== Request to Undeploy Artifact: mule-tester
+INFO  2020-05-15 10:26:01,173 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping application 'mule-tester'                                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:26:01,175 [Embedded] org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager: Stopping flow: mule-testerFlow1
+INFO  2020-05-15 10:26:01,175 [Embedded] org.mule.runtime.core.internal.construct.AbstractFlowConstruct: Not stopping source for 'mule-testerFlow1', it was not started because of org.mule.munit.runner.component.state.MunitComponentInitialStateManager@53af0090
+INFO  2020-05-15 10:26:01,177 [pool-4-thread-1] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2020-05-15 10:26:01,177 [pool-5-thread-1] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2020-05-15 10:26:01,181 [Embedded] org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager: Stopping flow: mule-testerFlow
+INFO  2020-05-15 10:26:01,181 [Embedded] org.mule.runtime.core.internal.construct.AbstractFlowConstruct: Not stopping source for 'mule-testerFlow', it was not started because of org.mule.munit.runner.component.state.MunitComponentInitialStateManager@53af0090
+INFO  2020-05-15 10:26:01,183 [Embedded] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Stopping Bean: org.mule.runtime.module.extension.internal.runtime.config.ConfigurationProviderToolingAdapter-HTTP_Listener_config
+INFO  2020-05-15 10:26:01,185 [Embedded] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Stopping Bean: org.mule.runtime.module.extension.internal.runtime.config.ConfigurationProviderToolingAdapter-HTTP_Request_configuration
+INFO  2020-05-15 10:26:01,293 [Embedded] org.mule.runtime.core.internal.lifecycle.RegistryLifecycleCallback: Failure executing phase stop over object com.mulesoft.mule.runtime.module.batch.internal.engine.DefaultBatchEngine@78ac7829, error message is: Failed to invoke lifecycle phase "stop" on object: com.mulesoft.mule.runtime.module.batch.internal.engine.DefaultBatchEngine@78ac7829
+INFO  2020-05-15 10:26:01,295 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing application 'mule-tester'                                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:26:01,295 [Embedded] org.mule.runtime.module.deployment.impl.internal.artifact.AbstractDeployableArtifact: Stopping app 'mule-tester' with no mule context
+INFO  2020-05-15 10:26:01,367 [Embedded] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Disposing Bean: org.mule.runtime.module.extension.internal.runtime.config.ConfigurationProviderToolingAdapter-HTTP_Listener_config
+INFO  2020-05-15 10:26:01,367 [Embedded] org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager: Disposing flow: mule-testerFlow1
+INFO  2020-05-15 10:26:01,368 [Embedded] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Disposing Bean: listener
+INFO  2020-05-15 10:26:01,368 [Embedded] org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager: Disposing flow: mule-testerFlow
+INFO  2020-05-15 10:26:01,369 [Embedded] org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager: Disposing Bean: org.mule.runtime.module.extension.internal.runtime.config.ConfigurationProviderToolingAdapter-HTTP_Request_configuration
+INFO  2020-05-15 10:26:06,331 [[MuleRuntime].uber.02: [mule-tester].mule-tester-test-suite-mule-testerFlowTest/route/2/processors/0.ps.CPU_LITE @5a03d483] org.mule.service.scheduler.internal.DefaultScheduler: 0 jobs were cancelled for this Scheduler.
+ERROR 2020-05-15 10:26:13,527 [Embedded] org.mule.service.scheduler.internal.threads.SchedulerThreadPools: Unable to destroy ThreadGroup 'munit' of Scheduler 'munit @5813bef0' (java.lang.IllegalThreadStateException). Remaining threads in the group are:
+	* scala-execution-context-global-51
+	* scala-execution-context-global-52
+	* scala-execution-context-global-53
+	* scala-execution-context-global-54
+
+INFO  2020-05-15 10:26:13,538 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+* Application "mule-tester" shut down normally on: 5/15/20, 10:26 AM *
+* Up for: 0 days, 0 hours, 0 mins, 19.426 sec                        *
+**********************************************************************
+INFO  2020-05-15 10:26:13,632 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Undeployed artifact 'mule-tester'                                            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:26:13,633 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping domain 'default'                                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:26:13,633 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing domain 'default'                                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2020-05-15 10:26:13,633 [Embedded] org.mule.runtime.module.deployment.impl.internal.artifact.AbstractDeployableArtifact: Stopping domain 'default' with no mule context
+INFO  2020-05-15 10:26:13,634 [Embedded] org.mule.runtime.core.internal.logging.LogUtil: 
+**********************************************************************
+* Domain "default" shut down normally on: 5/15/20, 10:26 AM          *
+* Up for: 0 days, 0 hours, 0 mins, 22.623 sec                        *
+**********************************************************************
+INFO  2020-05-15 10:26:13,764 [Embedded] org.mule.service.scheduler.internal.DefaultSchedulerService: Stopping DefaultSchedulerService...
+INFO  2020-05-15 10:26:14,036 [Embedded] org.mule.service.scheduler.internal.DefaultSchedulerService: Stopped org.mule.service.scheduler.internal.DefaultSchedulerService$1@69346d05
+INFO  2020-05-15 10:26:15,087 [main] org.mule.munit.remote.coverage.CoverageManager: Shutting down coverage server
+INFO  2020-05-15 10:26:15,087 [main] org.mule.munit.remote.coverage.CoverageManager: Calculating application coverage
+ERROR 2020-05-15 10:26:15,088 [pool-3-thread-1] org.mule.munit.plugins.coverage.server.CoverageServer: Failed to start Coverage Server in port 50372
+INFO  2020-05-15 10:26:15,106 [main] org.mule.munit.remote.RemoteRunner: Done
+[INFO] ===============================================================================
+[INFO] MUnit Coverage Summary
+[INFO] ===============================================================================
+[INFO]  * Resources: 1 - Flows: 2 - Processors: 4
+[INFO]  * Application Coverage: 50.00%
+[INFO] ====================================================================================
+[INFO] MUnit Run Summary - Product: MULE_EE, Version: 4.3.0
+[INFO] ====================================================================================
+[INFO]  >> mule-tester-test-suite.xml test result: Tests: 2, Errors: 1, Failures: 0, Skipped: 1
+[INFO] 	 --- mule-tester-test-suite-mule-testerFlowTest <<< ERROR
+[INFO] 	
+[INFO] ====================================================================================
+[INFO]  > Tests:   	2
+[INFO]  > Errors:  	1
+[INFO]  > Failures:	0
+[INFO]  > Skipped: 	1
+[INFO] ====================================================================================
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.710 s
+[INFO] Finished at: 2020-05-15T10:26:15-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.mulesoft.munit.tools:munit-maven-plugin:2.2.5:test (test) on project mule-tester: Build Failed: MUnit Tests Failed -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

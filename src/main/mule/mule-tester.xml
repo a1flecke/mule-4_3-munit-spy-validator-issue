@@ -32,7 +32,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		</http:listener>
 		<apikit:router doc:name="APIkit Router" doc:id="558c13d6-54db-40bc-9bf6-02f3bc75b47d" config-ref="Router"/>
 		<error-handler >
-			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="540e5516-e0f1-41a8-8a09-abac6272c9cf" type="Any">
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="540e5516-e0f1-41a8-8a09-abac6272c9cf" type="ANY">
 				<set-variable value="500" doc:name="Set Variable" doc:id="ef02d541-9a47-4670-88a5-e6032130c943" variableName="httpStatus"/>
 			</on-error-propagate>
 		</error-handler>
