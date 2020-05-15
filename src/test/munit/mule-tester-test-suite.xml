@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:munit="http://www.mulesoft.org/schema/mule/munit"
+	xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<munit:config name="mule-tester-test-suite.xml" />
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="57fe1201-2e18-46b3-8f7f-23a6bdf99725" responseTimeout="100000000">
+		<http:request-connection host="0.0.0.0" port="8081" connectionIdleTimeout="3000000"/>
+	</http:request-config>
+	<munit:test name="mule-tester-test-suite-mule-testerFlowTest" doc:id="dd5e425b-bccb-4329-b108-1389ed468363" description="Test" timeOut="5000000">
+		<munit:enable-flow-sources >
+			<munit:enable-flow-source value="mule-testerFlow" />
+			<munit:enable-flow-source value="mule-testerFlow1" />
+		</munit:enable-flow-sources>
+		<munit:behavior >
+			<munit-tools:spy doc:name="Spy" doc:id="b9cdeec3-22f6-4c49-8345-5b08b2b6a155" processor="ee:transform">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:before-call >
+					<munit-tools:assert-equals doc:name="Assert equals" doc:id="cc0178cb-7b59-4ae1-b8d1-87dcd0320e38" actual="#[1 as Number]" expected="#[2 as Number]" message="***FAILED***"/>
+				</munit-tools:before-call>
+				<munit-tools:after-call >
+					<munit-tools:assert-equals doc:name="Assert equals" doc:id="07f7a01f-d221-4949-9855-8b2da86700d8" actual="#[1 as Number]" expected="#[1 as Number]" message="***THIS DOES NOT FAIL***" />
+				</munit-tools:after-call>
+			</munit-tools:spy>
+		</munit:behavior>
+		<munit:execution >
+			<http:request method="GET" doc:name="Request" doc:id="0f1262ff-35e3-4e7d-8fb0-64d4c11211e3" config-ref="HTTP_Request_configuration" path="/test">
+				<http:body ><![CDATA[My Payload]]></http:body>
+			</http:request>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="mule-tester-test-suite-mule-testerFlowTest1" doc:id="92145956-ba67-49fa-9118-7e0a2cd5222c" description="Test" ignore="true">
+		<munit:behavior >
+			<munit-tools:spy doc:name="Spy" doc:id="0cfab136-add7-4f7c-90aa-f27bd7d12d5d" processor="ee:transform">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:before-call >
+					<munit-tools:assert-equals doc:name="Copy_of_Assert equals" doc:id="59386415-a6b7-4bb7-a64e-058accfad67c" actual="#[1 as Number]" expected="#[2 as Number]" message="***FAILED***" />
+				</munit-tools:before-call>
+			</munit-tools:spy>
+		</munit:behavior>
+		<munit:execution >
+			<set-payload value="My Test Payload" doc:name="Set Payload" doc:id="52b73f26-8aa5-4afd-8030-f89463dfe61b" />
+			<flow-ref doc:name="Flow-ref to mule-testerFlow" doc:id="3fc43a1d-a8cd-4859-80dc-3ca5bc86488e" name="mule-testerFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-equals doc:name="Copy_of_Assert equals" doc:id="140661a8-c133-4ccd-a86e-5e13159a1d5b" actual="#[1 as Number]" expected="#[1 as Number]" message="***THIS DOES NOT FAIL***" />
+		</munit:validation>
+	</munit:test>
+
+</mule>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="6c31d169-9d79-4a79-ad3d-2c6a11573b35" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<apikit:config outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" doc:name="Router" doc:id="9c70179e-5f97-4311-aca5-1ac155420aaa" name="Router" api="api/tester.raml" >
+		<apikit:flow-mappings >
+			<apikit:flow-mapping resource="/test" action="get" flow-ref="mule-testerFlow" />
+		</apikit:flow-mappings>
+	</apikit:config>
+	<flow name="mule-testerFlow1" doc:id="1d8fb57e-4431-44b9-bb02-bd23d939b056" >
+		<http:listener doc:name="Listener" doc:id="4055cdb2-5228-4fb6-8da3-619e36b8cc0a" config-ref="HTTP_Listener_config" path="/*">
+			<http:response statusCode="#[vars.httpStatus default 200]">
+				<http:headers>
+					<![CDATA[#[vars.outboundHeaders default {}]]]>
+				</http:headers>
+			</http:response>
+			<http:error-response statusCode="#[vars.httpStatus default 500]">
+				<http:body>
+					<![CDATA[#[payload]]]>
+				</http:body>
+				<http:headers>
+					<![CDATA[#[vars.outboundHeaders default {}]]]>
+				</http:headers>
+			</http:error-response>
+		</http:listener>
+		<apikit:router doc:name="APIkit Router" doc:id="558c13d6-54db-40bc-9bf6-02f3bc75b47d" config-ref="Router"/>
+		<error-handler >
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="540e5516-e0f1-41a8-8a09-abac6272c9cf" type="Any">
+				<set-variable value="500" doc:name="Set Variable" doc:id="ef02d541-9a47-4670-88a5-e6032130c943" variableName="httpStatus"/>
+			</on-error-propagate>
+		</error-handler>
+	</flow>
+	<flow name="mule-testerFlow" doc:id="259ce342-a781-429d-af04-09b3925dd4fc" >
+		<logger level="INFO" doc:name="Aaron Log Received" doc:id="adf6f7ca-afcb-42f8-98d9-8e1ff6896a5c" message="#[payload]" category="***HEY AARON***"/>
+		<ee:transform doc:name="Transform Message" doc:id="e14fe1cf-392d-42ad-a788-b9565e7a6576" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output text/plain
+---
+payload ++ 1 as String]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
